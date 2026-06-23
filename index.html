@@ -14,7 +14,6 @@ box-sizing: border-box;
 }
 body {
 font-family: 'Poppins', sans-serif;
-/* Gradasi Coklat ke Krem untuk background luar */
 background: linear-gradient(135deg, #8B5E34 0%, #E6D5B8 100%);
 min-height: 100vh;
 padding: 20px;
@@ -28,7 +27,6 @@ overflow: hidden;
 box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
 .header {
-/* Gradasi Coklat ke Krem untuk Header */
 background: linear-gradient(135deg, #8B5E34 0%, #E6D5B8 100%);
 padding: 40px 20px 30px;
 text-align: center;
@@ -77,7 +75,6 @@ transition: all 0.3s ease;
 cursor: pointer;
 }
 .link-button:hover {
-/* Efek hover tombol Coklat */
 background: #8B5E34;
 color: white;
 border-color: #8B5E34;
@@ -120,22 +117,26 @@ color: white;
 transform: translateX(5px);
 box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+/* KODE ICON FOLDER YANG DIPERBARUI */
 .album-icon {
-/* Gradasi Coklat ke Krem untuk Ikon Folder */
-background: linear-gradient(135deg, #8B5E34 0%, #E6D5B8 100%);
+width: 45px;
+height: 45px;
+background: #F2E6D6; /* Background krem lembut agar tidak menyatu dengan tombol putih */
 border-radius: 10px;
 display: flex;
 align-items: center;
 justify-content: center;
 margin-right: 15px;
-color: white;
+color: #8B5E34; /* Ikon folder berwarna coklat pekat agar tegas dan jelas */
 font-size: 20px;
 flex-shrink: 0;
+transition: all 0.3s ease;
 }
 .album-button:hover .album-icon {
-background: white;
-color: #8B5E34;
+background: #8B5E34;
+color: white;
 }
+/* ================================= */
 .album-name {
 flex: 1;
 font-weight: 600;
@@ -231,13 +232,11 @@ instagramUrl: 'https://www.instagram.com/monoga.photobooth?igsh=ZXg0MTkzMnRrNjI2
 // ==========================================
 const albums = [
 {
-name: "ALIN & ANDO",
-// MASUKKAN LINK GOOGLE PHOTOS DI BAWAH INI
-albumLink: "https://photos.app.goo.gl/LINK_FOTO_ALIN_ANDO" 
+name: "DWI & DIMAS (WEDDING)",
+albumLink: "https://photos.app.goo.gl/LINK_FOTO_DWI_DIMAS_DISINI" 
 },
 {
 name: "SOON",
-// MASUKKAN LINK GOOGLE PHOTOS DI BAWAH INI
 albumLink: "#" 
 },
 ];
@@ -272,10 +271,8 @@ container.appendChild(tombol);
 // EVENT LISTENER - SAAT HALAMAN DIMUAT
 // ==========================================
 document.addEventListener('DOMContentLoaded', function() {
-// Tampilkan semua album
 tampilkanAlbum();
 
-// Tombol WhatsApp diklik
 document.getElementById('whatsappBtn').addEventListener('click', function(e) {
 e.preventDefault();
 const pesan = encodeURIComponent(contactInfo.whatsappMessage);
@@ -283,7 +280,6 @@ const url = `https://wa.me/${contactInfo.whatsappNumber}?text=${pesan}`;
 window.open(url, '_blank');
 });
 
-// Tombol Instagram diklik
 document.getElementById('instagramBtn').addEventListener('click', function(e) {
 e.preventDefault();
 window.open(contactInfo.instagramUrl, '_blank');
