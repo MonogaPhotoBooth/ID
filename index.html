@@ -556,7 +556,7 @@
         }
 
         .footer-text::before {
-            content: '💕 ';
+            content: ' ';
         }
 
         .footer-links {
@@ -950,9 +950,9 @@
                 } else {
                     // Fallback untuk browser jadul: copy link ke clipboard
                     navigator.clipboard.writeText(window.location.href).then(() => {
-                        showToast('Link berhasil disalin ke clipboard! 📋');
+                        showToast('Link berhasil disalin ke clipboard! ');
                     }).catch(() => {
-                        showToast('Gagal menyalin link 😢');
+                        showToast('Gagal menyalin link ');
                     });
                 }
             });
